@@ -1,4 +1,6 @@
 <template>
+  <Nav/>
+  
   <section class="home-page">
     <div class="container">
       <div class="row">
@@ -9,9 +11,13 @@
 </template>
 
 <script>
+import Nav from '@/components/Nav.vue';
 
 export default {
-  name: 'Home Page'
+  name: 'Home Page',
+  components: {
+    Nav
+  }
 }
 
 </script>

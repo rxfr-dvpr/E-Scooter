@@ -18,6 +18,8 @@
 
 button {
     color: var(--main-black);
+    outline: none;
+    cursor: pointer;
 }
 
 html {
@@ -41,4 +43,27 @@ body {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.all-btn {
+    background: var(--main-white);
+    border-radius: 65px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 800;
+    border: 0;
+    text-transform: capitalize;
+    transition: .3s;
+
+    &:hover, &:active {
+        background-color: var(--main-orange);
+    }
 }
