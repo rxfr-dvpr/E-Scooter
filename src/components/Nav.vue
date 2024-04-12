@@ -62,9 +62,10 @@ export default {
         align-items: center;
 
         &-link {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 400;
-            transition: .3s;
+            transition: .4s;
+            color: var(--main-white);
             
             &::first-letter {
                 text-transform: uppercase;

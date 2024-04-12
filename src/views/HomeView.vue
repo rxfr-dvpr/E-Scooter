@@ -5,6 +5,8 @@
     <div class="container">
       <div class="row">
         <p>E-Scooter Soon...</p>
+
+        <button class="theme-btn all-btn" @click="changeTheme">Change theme</button>
       </div>
     </div>
   </section>
@@ -17,6 +19,13 @@ export default {
   name: 'Home Page',
   components: {
     Nav
+  },
+  methods: {
+    changeTheme() {
+      const body = document.querySelector('body');
+      
+      body.classList.toggle('light')
+    }
   }
 }
 
@@ -29,8 +38,11 @@ export default {
   height: 100vh;
 
   .row {
-    justify-items: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    row-gap: 35px;
 
     p {
       width: 100%;

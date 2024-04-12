@@ -4,14 +4,14 @@
     --main-white: #F1F1F1;
     --main-orange: #FF4C0D;
     --main-black: #151515;
-    --bg-color: #222222;
+    --bg-color: #151515;
+    --bg-2-color: #E0E0E0;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--main-white);
     font-family: "Ysabeau Infant", sans-serif;
 }
 
@@ -22,12 +22,26 @@ button {
     cursor: pointer;
 }
 
-html {
-    background-color: var(--main-black);
-}
 
 body {
     height: 100vh;
+    background-color: var(--bg-color);
+    transition: .4s;
+    color: var(--main-white);
+
+    &.light {
+        background-color: var(--bg-2-color);
+        color: var(--main-black);
+
+        .all-btn {
+            background-color: var(--main-black);
+            color: var(--main-white);
+        }
+
+        .nav__list-link {
+            color: var(--main-black);
+        }
+    }
 }
 
 .container {
@@ -61,7 +75,7 @@ ul {
     font-weight: 800;
     border: 0;
     text-transform: capitalize;
-    transition: .3s;
+    transition: .4s;
 
     &:hover, &:active {
         background-color: var(--main-orange);
