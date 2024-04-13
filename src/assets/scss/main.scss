@@ -13,6 +13,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Ysabeau Infant", sans-serif;
+    color: var(--main-white);
 }
 
 
@@ -24,22 +25,15 @@ button {
 
 
 body {
-    height: 100vh;
     background-color: var(--bg-color);
     transition: .4s;
-    color: var(--main-white);
 
     &.light {
         background-color: var(--bg-2-color);
-        color: var(--main-black);
 
         .all-btn {
             background-color: var(--main-black);
             color: var(--main-white);
-        }
-
-        .nav__list-link {
-            color: var(--main-black);
         }
     }
 }
@@ -68,6 +62,8 @@ ul {
 }
 
 .all-btn {
+    max-width: max-content;
+    width: 100%;
     background: var(--main-white);
     border-radius: 65px;
     padding: 10px 20px;

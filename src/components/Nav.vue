@@ -1,5 +1,5 @@
 <template>
-    <nav class="nav">
+    <nav class="nav" :class="{'light': light}">
         <div class="container">
             <div class="row">
                 <router-link to="/" class="nav-logo">
@@ -29,6 +29,12 @@ export default {
         return {
             store: navStore()
         }
+    },
+    props: {
+        light: {
+            type: Boolean,
+            default: false,
+        }
     }
 }
 
@@ -39,7 +45,7 @@ export default {
 .nav {
     width: 100%;
     padding: 50px 0;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
 
@@ -63,7 +69,7 @@ export default {
 
         &-link {
             font-size: 16px;
-            font-weight: 400;
+            font-weight: 500;
             transition: .4s;
             color: var(--main-white);
             
@@ -72,8 +78,14 @@ export default {
             }
 
             &:hover {
-                color: var(--main-orange);
+                color: var(--main-orange) !important;
             }
+        }
+    }
+
+    &.light {
+        .nav__list-link {
+            color: var(--main-black);
         }
     }
 }
