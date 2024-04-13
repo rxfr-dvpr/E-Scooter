@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <router-link to="/" class="nav-logo">
-                    <img src="@/assets/images/white-logo.svg" alt="" class="nav-logo-img">
+                    <img :src="light ? orangeLogo : whiteLogo" alt="" class="nav-logo-img">
                 </router-link>
 
                 <div class="nav-wrapper">
@@ -27,7 +27,9 @@ export default {
     name: 'Navigation',
     data() {
         return {
-            store: navStore()
+            store: navStore(),
+            whiteLogo: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/white-logo.svg?alt=media&token=32cfea1d-7a44-4907-9bba-d36b34b6b5ae',
+            orangeLogo: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/orangelogo.svg?alt=media&token=730f7741-89d8-4fd3-bd97-859de5a6ee88'
         }
     },
     props: {
@@ -51,6 +53,16 @@ export default {
 
     .row {
         justify-content: space-between;
+    }
+
+    &-logo {
+        max-width: 60px;
+        width: 100%;
+
+
+        &-img {
+            width: 100%;
+        }
     }
 
     &-wrapper {
