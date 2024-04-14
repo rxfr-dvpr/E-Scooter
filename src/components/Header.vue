@@ -6,7 +6,11 @@
 
             <p class="header-txt">{{ txt }}</p>
 
-            <button class="theme-btn all-btn" @click="this.$emit('changeTheme')">Change theme</button>
+            <button class="theme-btn" @click="this.$emit('changeTheme')" :class="{'light': light}">
+                <span class="dark-btn">черный</span>
+                <span class="bg"></span>
+                <span class="light-btn">белый</span>
+            </button>
 
             <img :src="light ? lightImg : darkImg" alt="" class="header-img">
         </div>
@@ -75,7 +79,55 @@ export default {
     }
 
     .theme-btn {
+        max-width: 250px;
+        width: 100%;
+        min-width: 250px;
+        height: 55px;
         margin-top: 60px;
+        background: transparent;
+        border: 3px solid var(--main-white);
+        border-radius: 108px;
+        display: flex;
+        position: relative;
+        transition: .4s;
+
+        .dark-btn, .light-btn {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 16px;
+            text-transform: capitalize;
+            font-weight: 700;
+            transition: .4s;
+        }
+
+        .dark-btn {
+            color: var(--main-black);
+        }
+
+        .bg {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -2px;
+            border-radius: 108px;
+            background: var(--main-white);
+            z-index: -1;
+            transition: .4s;
+        }
+
+        &.light {
+            border-color: var(--main-black);
+
+            .bg {
+                transform: translateX(103%);
+                background: var(--main-black);
+            }
+        }
     }
 
     &.light {
