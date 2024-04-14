@@ -27,6 +27,7 @@ button {
 body {
     background-color: var(--bg-color);
     transition: .4s;
+    overflow-x: hidden;
 
     &.light {
         background-color: var(--bg-2-color);
@@ -36,6 +37,10 @@ body {
             color: var(--main-white);
         }
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .container {

@@ -7,6 +7,8 @@
             <p class="header-txt">{{ txt }}</p>
 
             <button class="theme-btn all-btn" @click="this.$emit('changeTheme')">Change theme</button>
+
+            <img :src="light ? lightImg : darkImg" alt="" class="header-img">
         </div>
     </div>
   </header>
@@ -19,7 +21,9 @@ export default {
     data() {
         return {
             title: 'Стильный электросамокат с мощным аккумулятором',
-            txt: 'Улучшенная производительность для дальних путешествий. Работает так же просто, как и выглядит.'
+            txt: 'Улучшенная производительность для дальних путешествий. Работает так же просто, как и выглядит.',
+            darkImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Header%2Fheader-dark-img.png?alt=media&token=17de6d04-1df3-423d-9f76-04a823c83283',
+            lightImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Header%2Fheader-light-img.png?alt=media&token=7b087e23-9865-4feb-82f9-504d0dd7419f'
         }
     },
     props: {
@@ -36,11 +40,12 @@ export default {
 
 .header {
     width: 100%;
-    padding-top: 80px;
+    padding: 80px 0 125px;
 
     .row {
         flex-direction: column;
         row-gap: 30px;
+        position: relative;
     }
 
     &-title {
@@ -83,6 +88,13 @@ export default {
                 color: var(--main-black);
             }
         }
+    }
+
+    &-img {
+        position: absolute;
+        bottom: -70%;
+        left: 10%;
+        z-index: -1;
     }
 }
 
