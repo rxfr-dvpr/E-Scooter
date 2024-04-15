@@ -70,6 +70,16 @@ export default {
         width: 100%;
         display: flex;
         justify-content: space-between;
+
+        .buy-btn {
+            border: solid 2px transparent;
+
+            &:hover {
+                border-color: var(--main-white);
+                background: transparent;
+                color: var(--main-white);
+            }
+        }
     }
 
     &__list {
@@ -97,6 +107,11 @@ export default {
 
     &.light {
         .nav__list-link {
+            color: var(--main-black);
+        }
+
+        .buy-btn:hover {
+            border-color: var(--main-black);
             color: var(--main-black);
         }
     }

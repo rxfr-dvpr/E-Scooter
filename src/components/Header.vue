@@ -13,6 +13,8 @@
             </button>
 
             <img :src="light ? lightImg : darkImg" alt="" class="header-img">
+
+            <img src="@/assets/images/header-filter.png" alt="" class="header-filter">
         </div>
     </div>
   </header>
@@ -147,6 +149,15 @@ export default {
         bottom: -70%;
         left: 10%;
         z-index: -1;
+    }
+
+    &-filter {
+        max-width: 1300px;
+        width: 100%;
+        position: absolute;
+        bottom: 40%;
+        right: -30%;
+        z-index: -2;
     }
 }
 
