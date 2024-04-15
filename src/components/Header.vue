@@ -110,11 +110,11 @@ export default {
 
         .bg {
             width: 50%;
-            height: 100%;
+            height: 102%;
             position: absolute;
-            top: 0;
+            top: -1px;
             left: -2px;
-            border-radius: 108px;
+            border-radius: 100px;
             background: var(--main-white);
             z-index: -1;
             transition: .4s;
