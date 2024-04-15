@@ -82,3 +82,13 @@ ul {
         background-color: var(--main-orange);
     }
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-orange);
+    border-radius: 10px;
+}

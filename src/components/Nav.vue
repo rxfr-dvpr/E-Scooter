@@ -1,5 +1,5 @@
 <template>
-    <nav class="nav" :class="{'light': light}">
+    <nav class="nav" :class="{'light': light, 'blur': navBlur}">
         <div class="container">
             <div class="row">
                 <router-link to="/" class="nav-logo">
@@ -29,7 +29,8 @@ export default {
         return {
             store: navStore(),
             whiteLogo: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/white-logo.svg?alt=media&token=32cfea1d-7a44-4907-9bba-d36b34b6b5ae',
-            orangeLogo: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/orangelogo.svg?alt=media&token=730f7741-89d8-4fd3-bd97-859de5a6ee88'
+            orangeLogo: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/orangelogo.svg?alt=media&token=730f7741-89d8-4fd3-bd97-859de5a6ee88',
+            navBlur: false
         }
     },
     props: {
@@ -37,6 +38,11 @@ export default {
             type: Boolean,
             default: false,
         }
+    },
+    mounted() {
+        window.addEventListener('scroll', () => {
+            this.navBlur = window.scrollY > 10 ? true : false
+        })
     }
 }
 
@@ -46,10 +52,13 @@ export default {
 
 .nav {
     width: 100%;
-    padding: 50px 0;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     left: 0;
+    margin-top: 35px;
+    transition: .3s;
+    z-index: 2024;
 
     .row {
         justify-content: space-between;
@@ -58,7 +67,8 @@ export default {
     &-logo {
         max-width: 60px;
         width: 100%;
-
+        display: flex;
+        justify-content: center;
 
         &-img {
             width: 100%;
@@ -114,6 +124,10 @@ export default {
             border-color: var(--main-black);
             color: var(--main-black);
         }
+    }
+
+    &.blur {
+        backdrop-filter: blur(10px);
     }
 }
 
