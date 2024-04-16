@@ -13,6 +13,8 @@
                     <p class="info-txt">{{ info.txt }}</p>
                 </div>
             </div>
+
+            <img src="@/assets/images/performance-bg.png" alt="" class="performance-bg">
         </div>
     </div>
   </section>
@@ -66,11 +68,11 @@ export default {
             this.list[nextIndex].active = true;
         }
     },
-    mounted() {
-        setInterval(() => {
-        this.infinityAnim();
-        }, 600);
-    }
+    // mounted() {
+    //     setInterval(() => {
+    //     this.infinityAnim();
+    //     }, 600);
+    // }
 }
 
 </script>
@@ -83,6 +85,7 @@ export default {
     .row {
         flex-direction: column;
         row-gap: 80px;
+        position: relative;
     }
 
     .performance-title {
@@ -135,6 +138,15 @@ export default {
                 }
             }
         }
+    }
+
+    .performance-bg {
+        max-width: 800px;
+        width: 100%;
+        position: absolute;
+        top: -50%;
+        left: -20%;
+        z-index: -1;
     }
 }
 
