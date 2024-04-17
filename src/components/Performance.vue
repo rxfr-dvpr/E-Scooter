@@ -1,5 +1,5 @@
 <template>
-  <section class="performance__section">
+  <section class="performance__section" :class="{'light': light}">
     <div class="container">
         <div class="row">
             <h2 class="performance-title">{{ title }}</h2>
@@ -24,6 +24,12 @@
 
 export default {
     name: 'Performance Section',
+    props: {
+        light: {
+            type: Boolean,
+            default: false
+        }
+    },
     data() {
         return {
             title: 'Мощная батарея и экономичный расход заряда позволяют преодолевать расстояния до 45 км',
@@ -68,11 +74,11 @@ export default {
             this.list[nextIndex].active = true;
         }
     },
-    // mounted() {
-    //     setInterval(() => {
-    //     this.infinityAnim();
-    //     }, 600);
-    // }
+    mounted() {
+        setInterval(() => {
+        this.infinityAnim();
+        }, 600);
+    }
 }
 
 </script>
@@ -92,8 +98,9 @@ export default {
         max-width: 800px;
         width: 100%;
         font-size: 45px;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 110%;
+        transition: .4s;
     }
 
     .performance__info {
@@ -127,14 +134,18 @@ export default {
                 width: 100%;
                 height: 3px;
                 background: var(--main-white);
-                transition: .3s;
+                transition: .4s;
             }
 
             &.active {
                 opacity: 1;
 
+                .info-title {
+                    color: var(--main-orange) !important;
+                }
+
                 .info-line {
-                    background: var(--main-orange);
+                    background: var(--main-orange) !important;
                 }
             }
         }
@@ -147,6 +158,23 @@ export default {
         top: -50%;
         left: -20%;
         z-index: -1;
+    }
+
+    &.light {
+        .performance-title {
+            font-weight: 600;
+            color: var(--main-black);
+        }
+
+        .performance__info {
+            .info-title, .info-txt {
+                color: var(--main-black);
+            }
+
+            .info-line {
+                background: var(--main-black);
+            }
+        }
     }
 }
 

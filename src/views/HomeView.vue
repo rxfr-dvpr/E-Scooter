@@ -4,7 +4,7 @@
   <Header @changeTheme="theme" :light="lightTheme"/>
 
   <main class="main">
-    <Performance/>
+    <Performance :light="lightTheme"/>
   </main>
 </template>
 
