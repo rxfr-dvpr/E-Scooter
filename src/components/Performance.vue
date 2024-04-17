@@ -14,6 +14,11 @@
                 </div>
             </div>
 
+            <div class="performance-gallery">
+                <img :src="img.url" alt="" :class="`gallery-img img-${idx + 1} ${img.active ? 'active' : ''}`" 
+                v-for="(img, idx) in gallery" :key="idx" @click="imgActive(idx)">
+            </div>
+
             <img src="@/assets/images/performance-bg.png" alt="" class="performance-bg">
         </div>
     </div>
@@ -49,6 +54,16 @@ export default {
                     txt: 'Самокат оснащен аккумулятором емкостью 12 800 мАч. Это позволяет преодолевать расстояния до 45 км без подзарядки.',
                     active: false
                 },
+            ],
+            gallery: [
+                {
+                    url: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Performance%2Fgallery-img-1.png?alt=media&token=5412c4b2-ec2b-4982-8927-d548678ecd81',
+                    active: true
+                },
+                {
+                    url: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Performance%2Fgallery-img-2.png?alt=media&token=e6ee8022-fef3-4c22-b0f4-86059e659ab3',
+                    active: false
+                },
             ]
         }
     },
@@ -72,6 +87,11 @@ export default {
 
             // Activate the next item
             this.list[nextIndex].active = true;
+        },
+        imgActive(idx) {
+            this.gallery.map(img => img.active = false)
+
+            this.gallery[idx].active = true
         }
     },
     mounted() {
@@ -147,6 +167,30 @@ export default {
                 .info-line {
                     background: var(--main-orange) !important;
                 }
+            }
+        }
+    }
+
+    .performance-gallery {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .gallery-img {
+            max-width: 360px;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            height: max-content;
+            min-height: 300px;
+            object-fit: cover;
+            object-position: center center;
+            transition: .4s;
+            cursor: pointer;
+
+            &.active {
+                max-width: 760px !important;
             }
         }
     }

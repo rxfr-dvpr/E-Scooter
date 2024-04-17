@@ -17,6 +17,9 @@
     transition: .4s;
 }
 
+img {
+    user-select: none;
+}
 
 button {
     color: var(--main-black);
