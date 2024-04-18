@@ -94,11 +94,11 @@ export default {
             this.gallery[idx].active = true
         }
     },
-    // mounted() {
-    //     setInterval(() => {
-    //     this.infinityAnim();
-    //     }, 600);
-    // }
+    mounted() {
+        setInterval(() => {
+        this.infinityAnim();
+        }, 600);
+    }
 }
 
 </script>
