@@ -94,11 +94,11 @@ export default {
             this.gallery[idx].active = true
         }
     },
-    mounted() {
-        setInterval(() => {
-        this.infinityAnim();
-        }, 600);
-    }
+    // mounted() {
+    //     setInterval(() => {
+    //     this.infinityAnim();
+    //     }, 600);
+    // }
 }
 
 </script>
@@ -196,10 +196,10 @@ export default {
     }
 
     .performance-bg {
-        max-width: 800px;
+        max-width: 900px;
         width: 100%;
         position: absolute;
-        top: -50%;
+        top: -30%;
         left: -20%;
         z-index: -1;
     }

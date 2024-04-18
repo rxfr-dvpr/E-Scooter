@@ -5,6 +5,8 @@
 
   <main class="main">
     <Performance :light="lightTheme"/>
+
+    <Banner :light="lightTheme"/>
   </main>
 </template>
 
@@ -12,13 +14,15 @@
 import Nav from '@/components/Nav.vue';
 import Header from '@/components/Header.vue';
 import Performance from '@/components/Performance.vue';
+import Banner from '@/components/Banner.vue';
 
 export default {
   name: 'Home Page',
   components: {
     Nav,
     Header,
-    Performance
+    Performance,
+    Banner
   },
   data() {
     return {
