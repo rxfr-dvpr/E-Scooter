@@ -1,5 +1,5 @@
 <template>
-  <section class="performance__section" :class="{'light': light}">
+  <section class="performance__section" :class="{'light': light}" id="about">
     <div class="container">
         <div class="row">
             <h2 class="performance-title">{{ title }}</h2>
@@ -19,7 +19,7 @@
                 v-for="(img, idx) in gallery" :key="idx" @click="imgActive(idx)">
             </div>
 
-            <img src="@/assets/images/performance-bg.png" alt="" class="performance-bg">
+            <img :src="filterImg" alt="" class="performance-bg">
         </div>
     </div>
   </section>
@@ -64,7 +64,8 @@ export default {
                     url: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Performance%2Fgallery-img-2.png?alt=media&token=e6ee8022-fef3-4c22-b0f4-86059e659ab3',
                     active: false
                 },
-            ]
+            ],
+            filterImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Performance%2Fperformance-bg.png?alt=media&token=3d51eb76-33fd-43b1-abc0-e3164125f35e'
         }
     },
     methods: {

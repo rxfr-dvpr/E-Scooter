@@ -127,7 +127,7 @@ export default {
     }
 
     &.blur {
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(25px);
     }
 }
 

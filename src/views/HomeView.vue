@@ -7,6 +7,8 @@
     <Performance :light="lightTheme"/>
 
     <Banner :light="lightTheme"/>
+
+    <Appearance :light="lightTheme"/>
   </main>
 </template>
 
@@ -15,6 +17,7 @@ import Nav from '@/components/Nav.vue';
 import Header from '@/components/Header.vue';
 import Performance from '@/components/Performance.vue';
 import Banner from '@/components/Banner.vue';
+import Appearance from '@/components/Appearance.vue';
 
 export default {
   name: 'Home Page',
@@ -22,7 +25,8 @@ export default {
     Nav,
     Header,
     Performance,
-    Banner
+    Banner,
+    Appearance
   },
   data() {
     return {

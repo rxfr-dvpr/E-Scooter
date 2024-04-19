@@ -14,7 +14,7 @@
 
             <img :src="light ? lightImg : darkImg" alt="" class="header-img">
 
-            <img src="@/assets/images/header-filter.png" alt="" class="header-filter">
+            <img :src="filterImg" alt="" class="header-filter">
         </div>
     </div>
   </header>
@@ -29,7 +29,8 @@ export default {
             title: 'Стильный электросамокат с мощным аккумулятором',
             txt: 'Улучшенная производительность для дальних путешествий. Работает так же просто, как и выглядит.',
             darkImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Header%2Fheader-dark-img.png?alt=media&token=17de6d04-1df3-423d-9f76-04a823c83283',
-            lightImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Header%2Fheader-light-img.png?alt=media&token=7b087e23-9865-4feb-82f9-504d0dd7419f'
+            lightImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Header%2Fheader-light-img.png?alt=media&token=7b087e23-9865-4feb-82f9-504d0dd7419f',
+            filterImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Header%2Fheader-filter.png?alt=media&token=0e138a49-091f-4c68-8efa-e64dc6408a58'
         }
     },
     props: {
