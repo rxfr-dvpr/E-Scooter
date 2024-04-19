@@ -10,9 +10,11 @@
                 <p class="banner__descr-txt">{{ txt }}</p>
             </div>
 
-            <span class="banner-filter"></span>
+            <img :src="filterImg" alt="" class="banner-filter">
         </div>
     </div>
+
+    <span class="banner-dark-bg"></span>
   </section>
 </template>
 
@@ -30,7 +32,8 @@ export default {
         return {
             logo: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/white-logo.svg?alt=media&token=32cfea1d-7a44-4907-9bba-d36b34b6b5ae',
             title: 'Высокая скорость передвижения',
-            txt: 'Двигатель мощностью до 600 Вт позволяет развивать скорость до 25 км/ч.'
+            txt: 'Двигатель мощностью до 600 Вт позволяет развивать скорость до 25 км/ч.',
+            filterImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Banner%2Fbanner-filter.png?alt=media&token=278a74df-eef7-47c5-9745-234ea80b6647'
         }
     }
 }
@@ -52,6 +55,7 @@ export default {
     .row {
         flex-direction: column;
         row-gap: 160px;
+        position: relative;
     }
 
     .banner-logo {
@@ -92,13 +96,22 @@ export default {
         }
     }
 
-    .banner-filter {
+    .banner-dark-bg {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
         left: 0;
         background: rgba($color: #000000, $alpha: .2);
+    }
+
+    .banner-filter {
+        max-width: max-content;
+        width: 100%;
+        position: absolute;
+        top: -160%;
+        right: -45%;
+        z-index: -1;
     }
 }
 
