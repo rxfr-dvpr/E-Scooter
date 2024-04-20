@@ -74,7 +74,7 @@ export default {
 
             this.list[idx].active = true
         },
-        infinityAnim() {
+        perforAnim() {
             const activeIndex = this.list.findIndex(info => info.active);
             const numItems = this.list.length;
 
@@ -97,7 +97,7 @@ export default {
     },
     mounted() {
         setInterval(() => {
-        this.infinityAnim();
+        this.perforAnim();
         }, 600);
     }
 }
