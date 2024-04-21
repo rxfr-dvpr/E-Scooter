@@ -67,6 +67,50 @@ export default {
             display: flex;
             flex-direction: column;
             row-gap: 30px;
+
+            &-title {
+                font-size: 45px;
+                color: var(--main-orange);
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+
+            &-txt {
+                font-size: 14px;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+
+        }
+
+        &__icons {
+            max-width: max-content;
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            &-item {
+                max-width: 120px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                .icon-img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &.light {
+        .application__descr-txt {
+            font-weight: 500;
+            color: var(--main-black);
         }
     }
 }
