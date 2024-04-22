@@ -98,11 +98,17 @@ ul {
 }
 
 .all-title-45 {
-    font-size: 45px;
+    font-size: calc(25px + 20 * (100vw / 1920));
     line-height: 110%;
     font-weight: 600;
 
     &::first-letter {
         text-transform: uppercase;
+    }
+}
+
+@media (min-width: 1920px) {
+    .all-title-45 {
+        font-size: 45px !important;
     }
 }
