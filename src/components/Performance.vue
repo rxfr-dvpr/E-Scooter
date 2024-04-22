@@ -2,7 +2,7 @@
   <section class="performance__section" :class="{'light': light}" id="about">
     <div class="container">
         <div class="row">
-            <h2 class="performance-title">{{ title }}</h2>
+            <h2 class="performance-title all-title-45">{{ title }}</h2>
 
             <div class="performance__info">
                 <div class="performance__info-item" v-for="(info, idx) in list" :key="idx" :class="{'active': info.active}" @click="changeActive(idx)">
@@ -118,9 +118,6 @@ export default {
     .performance-title {
         max-width: 800px;
         width: 100%;
-        font-size: 45px;
-        font-weight: 500;
-        line-height: 110%;
         transition: .4s;
     }
 

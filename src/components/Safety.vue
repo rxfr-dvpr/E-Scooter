@@ -2,7 +2,7 @@
   <section class="safety__section" :class="{'light': light}" id="safety">
     <div class="container">
         <div class="row">
-            <h2 class="safety-title">{{ title }}</h2>
+            <h2 class="safety-title all-title-45">{{ title }}</h2>
 
             <div class="safety__info">
                 <div class="safety__info-item" v-for="(info, idx) in list" :key="idx" :class="{'active': info.active}" @click="changeActive(idx)">
@@ -122,9 +122,6 @@ export default {
         &-title {
             max-width: 800px;
             width: 100%;
-            font-size: 45px;
-            font-weight: 600;
-            line-height: 110%;
             transition: .4s;
             color: var(--main-orange);
         }

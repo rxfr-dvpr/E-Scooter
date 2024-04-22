@@ -2,7 +2,7 @@
   <section class="appearance__section" :class="{'light': light}" id="appearance">
     <div class="container">
         <div class="row">
-            <h2 class="appearance-title">{{ title }}</h2>
+            <h2 class="appearance-title all-title-45">{{ title }}</h2>
 
             <div class="appearance__cards">
                 <div class="appearance__cards-item" v-for="(card, idx) in cards" :key="idx">
@@ -66,14 +66,8 @@ export default {
     .appearance {
         &-title {
             max-width: 700px;
-            font-size: 45px;
-            line-height: 110%;
+            width: 100%;
             color: var(--main-orange);
-            font-weight: 600;
-
-            &::first-letter {
-                text-transform: uppercase;
-            }
         }
 
         &-filter {

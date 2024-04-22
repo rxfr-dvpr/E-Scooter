@@ -5,7 +5,7 @@
             <span class="banner-logo"><img :src="logo" alt="" class="banner-logo-img"></span>
 
             <div class="banner__descr">
-                <h3 class="banner__descr-title">{{ title }}</h3>
+                <h3 class="banner__descr-title all-title-45">{{ title }}</h3>
 
                 <p class="banner__descr-txt">{{ txt }}</p>
             </div>
@@ -75,16 +75,6 @@ export default {
         flex-direction: column;
         row-gap: 25px;
         z-index: 3;
-
-        &-title {
-            font-size: 45px;
-            line-height: 100%;
-            font-weight: 600;
-
-            &::first-letter {
-                text-transform: uppercase;
-            }
-        }
 
         &-txt {
             max-width: 360px;

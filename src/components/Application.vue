@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="application__descr">
-                <h2 class="application__descr-title">{{ title }}</h2>
+                <h2 class="application__descr-title all-title-45">{{ title }}</h2>
                 <p class="application__descr-txt">{{ txt }}</p>
 
                 <div class="application__icons">
@@ -69,15 +69,12 @@ export default {
             row-gap: 30px;
 
             &-title {
-                font-size: 45px;
                 color: var(--main-orange);
-
-                &::first-letter {
-                    text-transform: uppercase;
-                }
             }
 
             &-txt {
+                max-width: 360px;
+                width: 100%;
                 font-size: 14px;
 
                 &::first-letter {
