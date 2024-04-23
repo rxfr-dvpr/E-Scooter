@@ -13,6 +13,8 @@
     <Safety :light="lightTheme"/>
 
     <Application :light="lightTheme"/>
+
+    <About :light="lightTheme"/>
   </main>
 </template>
 
@@ -24,6 +26,7 @@ import Banner from '@/components/Banner.vue';
 import Appearance from '@/components/Appearance.vue';
 import Safety from '@/components/Safety.vue';
 import Application from '@/components/Application.vue';
+import About from '@/components/About.vue';
 
 export default {
   name: 'Home Page',
@@ -34,7 +37,8 @@ export default {
     Banner,
     Appearance,
     Safety,
-    Application
+    Application,
+    About
   },
   data() {
     return {

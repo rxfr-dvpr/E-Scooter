@@ -112,3 +112,10 @@ ul {
         font-size: 45px !important;
     }
 }
+
+.about__section {
+    .about__descr-txt > span {
+        color: var(--main-black);
+        font-weight: 600;
+    }
+}
