@@ -14,6 +14,8 @@
             </div>
 
             <img :src="img" alt="" class="application-img">
+
+            <img :src="vectorImg" alt="" class="vector-img">
         </div>
     </div>
   </section>
@@ -43,7 +45,8 @@ export default {
                     icon: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Application%2Fplaymarket.svg?alt=media&token=dbefd7aa-adf7-43cc-8415-055ec22654ea'
                 }
             ],
-            img: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Application%2Fapp-img.png?alt=media&token=b05cf9fb-f55a-4fdf-a436-ff622ae0e52f'
+            img: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Application%2Fapp-img.png?alt=media&token=b05cf9fb-f55a-4fdf-a436-ff622ae0e52f',
+            vectorImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Application%2Fapplication-vector.png?alt=media&token=65d6cd89-9d26-4459-86e9-5095e9c17629'
         }
     }
 }
@@ -58,6 +61,7 @@ export default {
     .row {
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
 
     .application {
@@ -102,6 +106,12 @@ export default {
                 }
             }
         }
+
+        &-img {
+            max-width: 400px;
+            width: 100%;
+            z-index: 7;
+        }
     }
 
     &.light {
@@ -109,6 +119,15 @@ export default {
             font-weight: 500;
             color: var(--main-black);
         }
+    }
+
+    .vector-img {
+        max-width: 650px;
+        width: 100%;
+        position: absolute;
+        top: -38%;
+        right: -25%;
+        z-index: 6;
     }
 }
 

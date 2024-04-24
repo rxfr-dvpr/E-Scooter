@@ -197,6 +197,10 @@ export default {
                 &.active {
                     max-width: 760px !important;
                 }
+
+                &.img-2 {
+                    z-index: 7;
+                }
             }
         }
     
