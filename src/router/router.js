@@ -9,6 +9,11 @@ const router = createRouter({
       alias: ['/home'],
       component: () => import('@/views/HomeView.vue')
     },
+    {
+      path: '/:pathMatch(.*)*',
+      name: '404',
+      component: () => import('@/views/ErrorView.vue')
+    }
   ]
 })
 
