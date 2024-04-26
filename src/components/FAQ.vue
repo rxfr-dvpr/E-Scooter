@@ -122,6 +122,23 @@ export default {
             }
         }
     }
+
+    &.light {
+        .faq__descr-txt {
+            font-weight: 600;
+            color: var(--main-black);
+        }
+
+        .item-question {
+            color: var(--main-black);
+            font-weight: 700;
+        }
+
+        .item-answer {
+            color: var(--main-black);
+            font-weight: 600;
+        }
+    }
 }
 
 </style>
