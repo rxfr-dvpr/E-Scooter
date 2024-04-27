@@ -1,5 +1,5 @@
 <template>
-  <section class="reviews__section">
+  <section class="reviews__section" :class="{'light': light}">
     <div class="container">
         <div class="row">
             <h2 class="reviews-title all-title-45">{{ title }}</h2>
@@ -84,15 +84,18 @@ export default {
             padding: 40px;
             background: #111010;
             border-radius: 15px;
+            transition: .4s;
 
             .review-author {
                 font-size: 20px;
                 text-transform: capitalize;
                 font-weight: 600;
+                transition: .4s;
             }
 
             .review-msg {
                 font-size: 14px;
+                transition: .4s;
 
                 &::first-letter {
                     text-transform: uppercase;
@@ -108,6 +111,16 @@ export default {
             }
         }
         
+    }
+
+    &.light {
+        .reviews-list-item {
+            background: #f1f1f1;
+
+            .review-author, .review-msg {
+                color: var(--main-black);
+            }
+        }
     }
 }
 

@@ -18,7 +18,7 @@
 
     <FAQ :light="lightTheme"/>
 
-    <Reviews :light="lighTheme"/>
+    <Reviews :light="lightTheme"/>
   </main>
 </template>
 
