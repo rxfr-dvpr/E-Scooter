@@ -17,6 +17,8 @@
     <About :light="lightTheme"/>
 
     <FAQ :light="lightTheme"/>
+
+    <Reviews :light="lighTheme"/>
   </main>
 </template>
 
@@ -30,6 +32,7 @@ import Safety from '@/components/Safety.vue';
 import Application from '@/components/Application.vue';
 import About from '@/components/About.vue';
 import FAQ from '@/components/FAQ.vue';
+import Reviews from '@/components/Reviews.vue';
 
 export default {
   name: 'Home Page',
@@ -42,7 +45,8 @@ export default {
     Safety,
     Application,
     About,
-    FAQ
+    FAQ,
+    Reviews
   },
   data() {
     return {
