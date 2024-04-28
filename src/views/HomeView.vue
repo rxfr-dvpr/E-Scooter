@@ -20,6 +20,8 @@
 
     <Reviews :light="lightTheme"/>
   </main>
+
+  <Footer :light="lightTheme"/>
 </template>
 
 <script>
@@ -33,6 +35,7 @@ import Application from '@/components/Application.vue';
 import About from '@/components/About.vue';
 import FAQ from '@/components/FAQ.vue';
 import Reviews from '@/components/Reviews.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'Home Page',
@@ -46,7 +49,8 @@ export default {
     Application,
     About,
     FAQ,
-    Reviews
+    Reviews,
+    Footer
   },
   data() {
     return {
