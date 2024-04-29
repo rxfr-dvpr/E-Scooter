@@ -1,5 +1,5 @@
 <template>
-  <section class="reviews__section" :class="{'light': light}">
+  <section class="reviews__section" :class="{'light': light}" id="reviews">
     <div class="container">
         <div class="row">
             <h2 class="reviews-title all-title-45">{{ title }}</h2>
