@@ -15,6 +15,8 @@
             </div>
 
             <button class="review-btn all-btn">{{ btnVal }}</button>
+
+            <img :src="reviewsBg" alt="" class="reviews-bg">
         </div>
     </div>
   </section>
@@ -47,7 +49,8 @@ export default {
                     msg: 'Мой вес 57кг, прошитый с максимальной 32км в час в режиме S по Москве у меня осилил - 25км и еще оставалось 16% заряда. ОБЯЗАТЕЛЬНО: следите за давлением в камерах. Прям очень советую купить электронный насос от Xiaomi, и раз в неделю подкачивайте. С завода самокат приезжает с сильно недокачанными'
                 }
             ],
-            btnVal: 'Оставить отзыв'
+            btnVal: 'Оставить отзыв',
+            reviewsBg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Reviews%2Freviews-bg.png?alt=media&token=dcfebab1-2b43-4bcb-8a89-fc82e5811909'
         }
     }
 }
@@ -62,6 +65,7 @@ export default {
     .row {
         flex-direction: column;
         row-gap: 30px;
+        position: relative;
     }
     
     .reviews-title {
@@ -124,6 +128,15 @@ export default {
                 color: var(--main-black);
             }
         }
+    }
+
+    .reviews-bg {
+        max-width: 1000px;
+        width: 100%;
+        position: absolute;
+        bottom: -30%;
+        right: -25%;
+        z-index: -1;
     }
 }
 

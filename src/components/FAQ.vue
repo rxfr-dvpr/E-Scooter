@@ -146,7 +146,7 @@ export default {
 
     .faq-bg {
         position: absolute;
-        top: -20%;
+        top: -30%;
         left: -15%;
         max-width: 650px;
         width: 100%;
