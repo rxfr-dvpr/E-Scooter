@@ -16,9 +16,9 @@
 
     <About :light="lightTheme"/>
 
-    <FAQ :light="lightTheme"/>
-
     <Reviews :light="lightTheme"/>
+
+    <FAQ :light="lightTheme"/>
   </main>
 
   <Footer :light="lightTheme"/>

@@ -18,6 +18,8 @@
                     <p class="item-answer">{{ item.answer }}</p>
                 </li>
             </ul>
+
+            <img :src="faqBg" alt="" class="faq-bg">
         </div>
     </div>
   </section>
@@ -57,7 +59,8 @@ export default {
                     question: 'Это версия для Китая или Европы?',
                     answer: 'Это Европейская версия, со всеми обновлениями и евро-вилкой.'
                 }
-            ]
+            ],
+            faqBg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/FAQ%2Ffaq-bg.png?alt=media&token=791b2dc3-ab3d-4987-9869-643161eb4160'
         }
     }
 }
@@ -71,6 +74,7 @@ export default {
 
     .row {
         justify-content: space-between;
+        position: relative;
     }
 
     .faq__descr {
@@ -138,6 +142,15 @@ export default {
             color: var(--main-black);
             font-weight: 600;
         }
+    }
+
+    .faq-bg {
+        position: absolute;
+        top: -20%;
+        left: -15%;
+        max-width: 650px;
+        width: 100%;
+        z-index: -1;
     }
 }
 
