@@ -193,14 +193,12 @@ export default {
                 object-position: center center;
                 transition: .4s;
                 cursor: pointer;
+                z-index: 6;
     
                 &.active {
                     max-width: 760px !important;
                 }
 
-                &.img-2 {
-                    z-index: 7;
-                }
             }
         }
     

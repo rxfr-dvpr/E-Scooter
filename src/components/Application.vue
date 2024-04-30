@@ -16,6 +16,8 @@
             <img :src="img" alt="" class="application-img">
 
             <img :src="vectorImg" alt="" class="vector-img">
+
+            <img :src="appBg" alt="" class="application-bg">
         </div>
     </div>
   </section>
@@ -46,7 +48,8 @@ export default {
                 }
             ],
             img: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Application%2Fapp-img.png?alt=media&token=b05cf9fb-f55a-4fdf-a436-ff622ae0e52f',
-            vectorImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Application%2Fapplication-vector.png?alt=media&token=65d6cd89-9d26-4459-86e9-5095e9c17629'
+            vectorImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Application%2Fapplication-vector.png?alt=media&token=65d6cd89-9d26-4459-86e9-5095e9c17629',
+            appBg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Application%2Fapplication-bg.png?alt=media&token=60f894fd-519c-48e9-99e6-d1614adf1829'
         }
     }
 }
@@ -111,6 +114,13 @@ export default {
             max-width: 400px;
             width: 100%;
             z-index: 7;
+        }
+
+        &-bg {
+            position: absolute;
+            bottom: -15%;
+            left: 25%;
+            z-index: 4;
         }
     }
 
