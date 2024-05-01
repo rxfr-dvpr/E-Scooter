@@ -12,6 +12,8 @@
 
                     <p class="card-txt">{{ card.txt }}</p>
                 </div>
+
+                <img :src="cardsBg" alt="" class="cards-img">
             </div>
 
             <img :src="filterImg" alt="" class="appearance-filter">
@@ -45,7 +47,8 @@ export default {
                     title : 'Удобная панель управления',
                     txt: 'Удобно расположенные элементы управления. Отображение8 типов данных в реальном времени: скорость, режим, заряд аккумулятора, состояние блокировки и другая информация.'
                 }
-            ]
+            ],
+            cardsBg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Appearance%2Fcards-bg.png?alt=media&token=d4d902f1-cf3e-4438-a464-30bad37fb838'
         }
     }
 }
@@ -85,6 +88,7 @@ export default {
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
+            position: relative;
 
             &-item {
                 max-width: 560px;
@@ -111,6 +115,15 @@ export default {
                     z-index: 2;
                 }
                 
+            }
+
+            .cards-img {
+                max-width: 700px;
+                width: 100%;
+                position: absolute;
+                top: 25%;
+                left: -25%;
+                z-index: -1;
             }
         }
     }
