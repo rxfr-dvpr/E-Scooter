@@ -17,8 +17,10 @@
             <div class="safety-gallery">
                 <img :src="img.url" alt="" :class="`safety-img img-${idx + 1} ${img.active ? 'active' : ''}`" 
                 v-for="(img, idx) in gallery" :key="idx" @click="imgActive(idx)">
-            </div>
 
+                <img :src="safetyImg" alt="" class="safety-bg">
+
+            </div>
         </div>
     </div>
   </section>
@@ -69,6 +71,7 @@ export default {
                     active: false
                 },
             ],
+            safetyImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Safety%2Fsafety-bg.png?alt=media&token=6e69b158-09dc-40b1-bd9a-30464219df3d'
         }
     },
     methods: {
@@ -181,6 +184,7 @@ export default {
             display: flex;
             justify-content: space-between;
             gap: 20px;
+            position: relative;
     
             .safety-img {
                 max-width: 360px;
@@ -200,10 +204,18 @@ export default {
                 }
 
             }
+            
         }
-    
+        
+        &-bg {
+            max-width: 750px;
+            width: 100%;
+            position: absolute;
+            top: -45%;
+            left: -13%;
+            z-index: -1;
+        }
     }
-
 
     &.light {
         .safety__info {
