@@ -89,7 +89,7 @@ export default {
         }
 
         &-txt {
-            max-width: 360px;
+            max-width: 300px;
             width: 100%;
             font-size: 14px;
         }
