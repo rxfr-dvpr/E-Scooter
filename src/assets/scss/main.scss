@@ -27,6 +27,22 @@ button {
     cursor: pointer;
 }
 
+.all-btn {
+    max-width: max-content;
+    width: 100%;
+    background: var(--main-white);
+    border-radius: 65px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 800;
+    border: solid 2px transparent;
+    text-transform: capitalize;
+    transition: .4s;
+
+    &:hover, &:active {
+        background-color: var(--main-orange);
+    }
+}
 
 body {
     background-color: var(--bg-color);
@@ -39,6 +55,12 @@ body {
         .all-btn {
             background-color: var(--main-black);
             color: var(--main-white);
+
+            &:hover {
+                background: transparent !important;
+                color: var(--main-black);
+                border-color: var(--main-black);
+            }
         }
     }
 }
@@ -68,23 +90,6 @@ a {
 
 ul {
     list-style: none;
-}
-
-.all-btn {
-    max-width: max-content;
-    width: 100%;
-    background: var(--main-white);
-    border-radius: 65px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 800;
-    border: 0;
-    text-transform: capitalize;
-    transition: .4s;
-
-    &:hover, &:active {
-        background-color: var(--main-orange);
-    }
 }
 
 ::-webkit-scrollbar {
