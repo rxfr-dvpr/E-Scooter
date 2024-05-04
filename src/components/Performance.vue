@@ -17,6 +17,8 @@
             <div class="performance-gallery">
                 <img :src="img.url" alt="" :class="`gallery-img img-${idx + 1} ${img.active ? 'active' : ''}`" 
                 v-for="(img, idx) in gallery" :key="idx" @click="imgActive(idx)">
+
+                <img :src="vectorImg" alt="" class="performance-vector">
             </div>
 
             <img :src="filterImg" alt="" class="performance-bg">
@@ -65,7 +67,8 @@ export default {
                     active: false
                 },
             ],
-            filterImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Performance%2Fperformance-bg.png?alt=media&token=3d51eb76-33fd-43b1-abc0-e3164125f35e'
+            filterImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Performance%2Fperformance-bg.png?alt=media&token=3d51eb76-33fd-43b1-abc0-e3164125f35e',
+            vectorImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Performance%2Fperformance-vector.png?alt=media&token=d44bdcde-e09f-42f6-b467-5ad1162d7e32'
         }
     },
     methods: {
@@ -174,6 +177,7 @@ export default {
         display: flex;
         justify-content: space-between;
         gap: 20px;
+        position: relative;
 
         .gallery-img {
             max-width: 360px;
@@ -190,6 +194,10 @@ export default {
             &.active {
                 max-width: 760px !important;
             }
+
+            &.img-1 {
+                z-index: 3;
+            }
         }
     }
 
@@ -200,6 +208,13 @@ export default {
         top: -30%;
         left: -20%;
         z-index: -1;
+    }
+
+    .performance-vector {
+        position: absolute;
+        top: 45%;
+        left: -13%;
+        pointer-events: none;
     }
 
     &.light {
