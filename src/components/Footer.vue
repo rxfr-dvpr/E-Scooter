@@ -72,4 +72,20 @@ export default {
     }
 }
 
+@media (max-width: 500px) {
+    
+    .footer {
+        &-contact {
+            align-items: center;
+            text-align: center;
+        }
+
+        .row {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+        }
+    }
+}
+
 </style>
