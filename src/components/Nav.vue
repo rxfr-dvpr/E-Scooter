@@ -6,7 +6,7 @@
                     <img :src="light ? orangeLogo : whiteLogo" alt="" class="nav-logo-img">
                 </router-link>
 
-                <div class="nav-wrapper" :class="{'opened': navOpened}">
+                <div class="nav-wrapper" :class="{'opened': navOpened}" @click.self="navOpened = false">
                     <ul class="nav__list">
                         <li class="nav__list-item" v-for="(link, idx) in store.links" :key="idx">
                             <a :href="link.url" class="nav__list-link">{{ link.name }}</a>
@@ -16,7 +16,7 @@
                     <button class="buy-btn all-btn">Купить</button>
                 </div>
 
-                <button class="all-btn" @click="navOpened = !navOpened" v-if="windowSize < 992">open</button>
+                <button class="open-btn" @click="navOpened = !navOpened" v-if="windowSize < 992"><i class="far fa-bars"></i></button>
             </div>
         </div>
     </nav>
@@ -47,6 +47,9 @@ export default {
         window.addEventListener('scroll', () => {
             this.navBlur = window.scrollY > 10 ? true : false
 
+        })
+
+        window.addEventListener('resize', () => {
             this.windowSize = window.innerWidth
         })
     }
@@ -122,6 +125,22 @@ export default {
             }
         }
     }
+    
+    .open-btn {
+        background: var(--main-white);
+        border-radius: 50%;
+        font-size: 20px;
+        padding: 10px 15px;
+        border: 0;
+        
+        i {
+            color: var(--main-black);
+        }
+
+        &:hover, &:active {
+            background: var(--main-orange);
+        }
+    }
 
     &.light {
         .nav__list-link {
@@ -151,6 +170,15 @@ export default {
         margin-top: 0;
     }
 
+    .nav {
+        &.light {
+            .nav-wrapper {
+                background: var(--main-white) !important;
+                box-shadow: 5px 1px 15px rgba($color: #151515, $alpha: .4);
+            }
+        }
+    }
+
     .nav-wrapper {
         max-width: 170px;
         width: 100%;
@@ -164,7 +192,7 @@ export default {
         padding: 15px;
         row-gap: 25px;
         background: var(--main-black);
-        box-shadow: 5px 1px 15px rgba($color: #FF4C0D, $alpha: .4);
+        box-shadow: 5px 1px 15px rgba($color: #fff, $alpha: .4);
         transform: translateX(-120%);
 
         .nav__list {
@@ -173,6 +201,10 @@ export default {
             flex-direction: column;
             align-items: flex-start;
             row-gap: 25px;
+
+            &-link {
+                font-weight: 600;
+            }
         }
 
         &.opened {
