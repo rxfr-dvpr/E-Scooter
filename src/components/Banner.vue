@@ -105,4 +105,14 @@ export default {
     }
 }
 
+@media (max-width: 992px) {
+    .banner__section {
+        padding: 80px 0 !important;
+    }
+
+    .row {
+        row-gap: 120px !important;
+    }
+}
+
 </style>
