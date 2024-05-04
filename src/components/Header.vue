@@ -58,7 +58,7 @@ export default {
     &-title {
         max-width: 950px;
         width: 100%;
-        font-size: 80px;
+        font-size: calc(30px + 50 * (100vw / 1920));
         line-height: 100%;
         transition: .4s;
 
@@ -70,7 +70,7 @@ export default {
     &-txt {
         max-width: 480px;
         width: 100%;
-        font-size: 30px;
+        font-size: calc(16px + 14 * (100vw / 1920));
         font-weight: 600;
         line-height: 100%;
         color: var(--main-orange);
@@ -159,6 +159,18 @@ export default {
         bottom: 40%;
         right: -30%;
         z-index: -2;
+    }
+}
+
+@media (min-width: 1920px) {
+    .header {
+        &-title {
+            font-size: 80px !important;
+        }
+
+        &-txt {
+            font-size: 30px !important;
+        }
     }
 }
 
