@@ -41,7 +41,7 @@ export default {
     }
 
     .error-num {
-        font-size: 120px;
+        font-size: calc(100px + 20 * (100vw / 1920));
     }
 
     .error-txt {
@@ -60,6 +60,12 @@ export default {
             margin-top: 5px;
             color: var(--main-orange);
         }
+    }
+}
+
+@media (min-width: 1920px) {
+    .error-num {
+        font-size: 120px !important;
     }
 }
 
