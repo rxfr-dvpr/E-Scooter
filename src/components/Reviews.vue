@@ -6,7 +6,15 @@
 
             <ReviewsSlider :dataList="slides" :light="light"/>
 
-            <button class="review-btn all-btn">{{ btnVal }}</button>
+            <div class="reviews-bottom">
+                <button class="review-btn all-btn">{{ btnVal }}</button>
+
+                <div class="slider-buttons">
+                    <button class="slider-btn prev"><i class="far fa-angle-left"></i></button>
+                    <button class="slider-btn next"><i class="far fa-angle-right"></i></button>
+                </div>
+            </div>
+
 
             <img :src="reviewsBg" alt="" class="reviews-bg">
         </div>
@@ -75,6 +83,55 @@ export default {
         bottom: -30%;
         right: -25%;
         z-index: -1;
+    }
+
+    .reviews-bottom {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .slider-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+
+            .slider-btn {
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                border: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: var(--main-white);
+
+                i {
+                    font-size: 25px;
+                    color: var(--main-black);
+                }
+
+                &:hover, &:active {
+                    background: var(--main-orange) !important;
+                }
+
+                &.swiper-button-disabled {
+                    opacity: .3;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    &.light {
+        .slider-btn {
+            background: var(--main-black) !important;
+
+            i {
+                color: var(--main-white) !important;
+            }
+        }
     }
 }
 

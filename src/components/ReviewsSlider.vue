@@ -1,5 +1,5 @@
 <template>
-  <swiper :navigation="true" :modules="modules" class="reviews-slider" :class="{'light': light}" :spaceBetween="40" :slidesPerView="2.5">
+  <swiper :navigation="btns" :modules="modules" class="reviews-slider" :class="{'light': light}" :spaceBetween="40" :slidesPerView="2.5">
     <swiper-slide class="reviews-slider-item" v-for="(item, idx) in dataList" :key="idx">
         <p class="review-author">{{ item.author }}</p>
         <span class="review-line"></span>
@@ -22,7 +22,11 @@ export default {
     },
     data() {
         return {
-            modules: [Navigation]
+            modules: [Navigation],
+            btns: {
+                prevEl: '.slider-buttons .slider-btn.prev',
+                nextEl: '.slider-buttons .slider-btn.next'
+            }
         }
     },
     props: {
