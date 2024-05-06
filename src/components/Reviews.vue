@@ -4,15 +4,7 @@
         <div class="row">
             <h2 class="reviews-title all-title-45">{{ title }}</h2>
 
-            <div class="reviews-list">
-                <div class="reviews-list-item" v-for="(item, idx) in slides" :key="idx">
-                    <p class="review-author">{{ item.author }}</p>
-
-                    <span class="review-line"></span>
-
-                    <p class="review-msg">{{ item.msg }}</p>
-                </div>
-            </div>
+            <ReviewsSlider :dataList="slides" :light="light"/>
 
             <button class="review-btn all-btn">{{ btnVal }}</button>
 
@@ -23,6 +15,7 @@
 </template>
 
 <script>
+import ReviewsSlider from './ReviewsSlider.vue'
 
 export default {
     name: 'Reviews Section',
@@ -52,6 +45,9 @@ export default {
             btnVal: 'Оставить отзыв',
             reviewsBg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Reviews%2Freviews-bg.png?alt=media&token=dcfebab1-2b43-4bcb-8a89-fc82e5811909'
         }
+    },
+    components: {
+        ReviewsSlider
     }
 }
 
@@ -70,64 +66,6 @@ export default {
     
     .reviews-title {
         color: var(--main-orange);
-    }
-
-    .reviews-list {
-        width: 100%;
-        display: flex;
-        gap: 40px;
-        overflow-x: auto;
-        scroll-snap-type: mandatory;
-        cursor: grab;
-        scroll-snap-align: center;
-        padding-bottom: 15px;
-
-        &-item {
-            width: 460px;
-            min-width: 460px;
-            display: flex;
-            flex-direction: column;
-            row-gap: 15px;
-            padding: 40px;
-            background: #111010;
-            border-radius: 15px;
-            transition: .4s;
-
-            .review-author {
-                font-size: 20px;
-                text-transform: capitalize;
-                font-weight: 600;
-                transition: .4s;
-            }
-
-            .review-msg {
-                font-size: 14px;
-                transition: .4s;
-
-                &::first-letter {
-                    text-transform: uppercase;
-                }
-            }
-
-            .review-line {
-                max-width: 100px;
-                width: 100%;
-                height: 3px;
-                background: var(--main-orange);
-                border-radius: 3px;
-            }
-        }
-        
-    }
-
-    &.light {
-        .reviews-list-item {
-            background: #f1f1f1;
-
-            .review-author, .review-msg {
-                color: var(--main-black);
-            }
-        }
     }
 
     .reviews-bg {
