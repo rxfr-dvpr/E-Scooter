@@ -17,6 +17,8 @@
             </div>
 
             <img :src="filterImg" alt="" class="appearance-filter">
+
+            <img :src="vectorImg" alt="" class="appearance-vector">
         </div>
     </div>
   </section>
@@ -48,7 +50,8 @@ export default {
                     txt: 'Удобно расположенные элементы управления. Отображение8 типов данных в реальном времени: скорость, режим, заряд аккумулятора, состояние блокировки и другая информация.'
                 }
             ],
-            cardsBg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Appearance%2Fcards-bg.png?alt=media&token=d4d902f1-cf3e-4438-a464-30bad37fb838'
+            cardsBg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Appearance%2Fcards-bg.png?alt=media&token=d4d902f1-cf3e-4438-a464-30bad37fb838',
+            vectorImg: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Appearance%2Fappearance-vector.png?alt=media&token=9223c26c-a2b0-4fe6-9937-1c68d5997ac4'
         }
     }
 }
@@ -125,6 +128,13 @@ export default {
                 left: -25%;
                 z-index: -1;
             }
+        }
+
+        &-vector {
+            position: absolute;
+            top: 70%;
+            left: -10%;
+            z-index: -1;
         }
     }
 
