@@ -1,5 +1,5 @@
 <template>
-  <section class="scooter__section">
+  <section class="scooter__section" :class="{'light' : light}">
     <div class="container">
         <div class="row">
             <div class="scooter__descr">
@@ -21,6 +21,8 @@
 
                 <li class="info__list-item" v-for="item in info.list" :key="item">{{ item }}</li>
             </ul>
+
+            <span class="scooter-bg"></span>
         </div>
     </div>
   </section>
@@ -68,6 +70,10 @@ export default {
 
     .row {
         justify-content: space-between;
+        padding: 60px;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
     }
 
     .scooter__descr {
@@ -85,7 +91,7 @@ export default {
         }
 
         &-btn {
-            margin-top: auto;
+            margin-top: 190px;
         }
     }
 
@@ -156,6 +162,34 @@ export default {
         &-item {
             font-size: 14px;
             font-weight: 300;
+        }
+    }
+
+    .scooter-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        background: #101010;
+    }
+
+    &.light {
+
+        .scooter__descr {
+            &-title {
+                color: var(--main-black);
+            }
+        }
+
+        .info__list {
+            &-title, &-item {
+                color: var(--main-black);
+            }
+        }
+        .scooter-bg {
+            background: #f0f0f0;
         }
     }
 }
