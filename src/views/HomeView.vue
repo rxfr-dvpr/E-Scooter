@@ -19,6 +19,8 @@
     <Reviews :light="lightTheme"/>
 
     <FAQ :light="lightTheme"/>
+
+    <Scooter :light="lightTheme" @changeTheme="theme"/>
   </main>
 
   <Footer :light="lightTheme"/>
@@ -36,6 +38,7 @@ import About from '@/components/About.vue';
 import FAQ from '@/components/FAQ.vue';
 import Reviews from '@/components/Reviews.vue';
 import Footer from '@/components/Footer.vue';
+import Scooter from '@/components/Scooter.vue';
 
 export default {
   name: 'Home Page',
@@ -50,6 +53,7 @@ export default {
     About,
     FAQ,
     Reviews,
+    Scooter,
     Footer
   },
   data() {

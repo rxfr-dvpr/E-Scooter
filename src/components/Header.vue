@@ -113,7 +113,7 @@ export default {
 
         .bg {
             width: 50%;
-            height: 102%;
+            height: 103%;
             position: absolute;
             top: -1px;
             left: -2px;
