@@ -24,6 +24,8 @@
 
             <span class="scooter-bg"></span>
         </div>
+
+        <img :src="light ? scooter2Img : scooter1Img" alt="" class="scooter-img">
     </div>
   </section>
 </template>
@@ -56,7 +58,9 @@ export default {
                     'Руководство пользователя',
                     'Буклет с информацией'
                 ]
-            }
+            },
+            scooter1Img: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Scooter%2Fscooter-img-1.png?alt=media&token=5590b6e7-ea1f-4217-881c-6fe28cbe5c0b',
+            scooter2Img: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Scooter%2Fscooter-img-2.png?alt=media&token=139dfc1c-0322-4ba6-87e1-4ba168e0431b'
         }
     }
 }
@@ -67,6 +71,10 @@ export default {
 
 .scooter__section {
     width: 100%;
+
+    .container {
+        position: relative;
+    }
 
     .row {
         justify-content: space-between;
@@ -191,6 +199,15 @@ export default {
         .scooter-bg {
             background: #f0f0f0;
         }
+    }
+
+    .scooter-img {
+        max-width: 570px;
+        width: 100%;
+        position: absolute;
+        bottom: -2%;
+        right: 7%;
+        pointer-events: none;
     }
 }
 
