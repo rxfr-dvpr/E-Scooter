@@ -75,6 +75,7 @@ export default {
     .row {
         justify-content: space-between;
         position: relative;
+        flex-wrap: unset;
     }
 
     .faq__descr {
@@ -151,6 +152,44 @@ export default {
         max-width: 650px;
         width: 100%;
         z-index: -1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .faq__list {
+        max-width: 600px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .faq__section {
+        .row {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 75px;
+        }
+
+        .faq__list {
+            &-item {
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        .faq__descr {
+            max-width: 500px;
+            align-items: center;
+            text-align: center;
+
+            &-txt {
+                max-width: 100%;
+            }
+        }
+
+        .faq-bg {
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }
 
