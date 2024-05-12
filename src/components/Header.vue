@@ -93,6 +93,7 @@ export default {
         display: flex;
         position: relative;
         transition: .4s;
+        z-index: 3;
 
         .dark-btn, .light-btn {
             width: 50%;
@@ -146,9 +147,11 @@ export default {
     }
 
     &-img {
+        max-width: 1945px;
+        width: 100%;
         position: absolute;
-        bottom: -70%;
-        left: 10%;
+        bottom: -20%;
+        left: 30%;
         z-index: -1;
     }
 
@@ -172,6 +175,22 @@ export default {
             font-size: 30px !important;
         }
     }
+}
+
+@media (max-width: 1700px) {
+    .header-filter {
+        right: 0 !important;
+    }
+
+    .header-img {
+        left: 0 !important;
+    }
+}
+
+@media (max-width: 876px) {
+    .header-filter {
+        bottom: 70%;
+    }    
 }
 
 </style>
