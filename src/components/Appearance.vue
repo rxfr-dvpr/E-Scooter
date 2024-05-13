@@ -16,9 +16,9 @@
                 <img :src="cardsBg" alt="" class="cards-img">
             </div>
 
-            <img :src="filterImg" alt="" class="appearance-filter">
+            <!-- <img :src="filterImg" alt="" class="appearance-filter">
 
-            <img :src="vectorImg" alt="" class="appearance-vector">
+            <img :src="vectorImg" alt="" class="appearance-vector"> -->
         </div>
     </div>
   </section>
@@ -142,6 +142,29 @@ export default {
         .appearance-title {
             color: var(--main-black);
         }
+    }
+}
+
+@media (max-width: 992px) {
+    .appearance__section {
+        .row {
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .appearance__cards {
+        &-item {
+            padding: 350px 50px 40px !important;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .appearance__cards-item {
+        padding: 250px 35px 40px !important;
     }
 }
 
