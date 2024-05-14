@@ -1,5 +1,6 @@
 <template>
-  <swiper :navigation="btns" :modules="modules" class="reviews-slider" :class="{'light': light}" :spaceBetween="40" :slidesPerView="2.5">
+  <swiper :navigation="btns" :modules="modules" class="reviews-slider" :class="{'light': light}" 
+   :breakpoints="breakpoints">
     <swiper-slide class="reviews-slider-item" v-for="(item, idx) in dataList" :key="idx">
         <p class="review-author">{{ item.author }}</p>
         <span class="review-line"></span>
@@ -26,6 +27,24 @@ export default {
             btns: {
                 prevEl: '.slider-buttons .slider-btn.prev',
                 nextEl: '.slider-buttons .slider-btn.next'
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 35
+                },
+                826: {
+                   slidesPerView: 2,
+                   spaceBetween: 35
+                },
+                600: {
+                    slidesPerView: 1.5,
+                   spaceBetween: 30
+                },
+                320: {
+                    slidesPerView: 1.1,
+                   spaceBetween: 20
+                }
             }
         }
     },

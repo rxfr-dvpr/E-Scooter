@@ -16,9 +16,9 @@
                 <img :src="cardsBg" alt="" class="cards-img">
             </div>
 
-            <!-- <img :src="filterImg" alt="" class="appearance-filter">
+            <img :src="filterImg" alt="" class="appearance-filter">
 
-            <img :src="vectorImg" alt="" class="appearance-vector"> -->
+            <img :src="vectorImg" alt="" class="appearance-vector">
         </div>
     </div>
   </section>

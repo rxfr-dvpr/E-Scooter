@@ -135,4 +135,22 @@ export default {
     }
 }
 
+@media (max-width: 1800px) {
+    .reviews-bg {
+        right: 0 !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .reviews-bg {
+        bottom: 15% !important;
+    }
+}
+
+@media (max-width: 826px) {
+    .reviews-bg {
+        bottom: 30% !important;
+    }
+}
+
 </style>
