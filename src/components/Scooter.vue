@@ -90,6 +90,7 @@ export default {
         display: flex;
         flex-direction: column;
         row-gap: 5px;
+        z-index: 5;
 
         &-price {
             font-size: 25px;
@@ -160,6 +161,7 @@ export default {
         display: flex;
         flex-direction: column;
         row-gap: 5px;
+        z-index: 5;
 
         &-title {
             font-size: 20px;
@@ -208,6 +210,33 @@ export default {
         bottom: -2%;
         right: 7%;
         pointer-events: none;
+    }
+}
+
+@media (max-width: 856px) {
+
+    .scooter__section {
+        .row {
+            padding: 60px 45px;
+        }
+    }
+    .scooter__descr {
+        max-width: 400px !important;
+    }
+}
+
+@media (max-width: 746px) {
+    .scooter__section {
+        .row {
+            padding: 60px 35px;
+        }
+    }
+    .scooter__descr {
+        max-width: max-content !important;
+    }
+
+    .info__list {
+        max-width: max-content !important;
     }
 }
 
