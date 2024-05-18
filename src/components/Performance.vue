@@ -235,4 +235,44 @@ export default {
     }
 }
 
+@media (max-width: 992px) {
+    .performance__info {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 876px) {
+    .performance-gallery {
+        flex-direction: column;
+        align-items: center;
+
+        .gallery-img {
+            max-width: 760px !important;
+            min-height: auto  !important;
+        }
+    }
+
+    .performance-title {
+        text-align: center;
+    }
+
+    .performance-bg {
+        top: -10% !important;
+        left: 0 !important;
+    }
+}
+
+@media (max-width: 856px) {
+    .performance__info {
+        max-width: 500px;
+        grid-template-columns: repeat(1, 1fr) !important;
+        margin: 0 auto;
+
+        &-item {
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
 </style>
