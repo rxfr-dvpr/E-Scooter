@@ -230,4 +230,45 @@ export default {
     }
 }
 
+
+@media (max-width: 992px) {
+    .safety__info {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 876px) {
+    .safety-gallery {
+        flex-direction: column;
+        align-items: center;
+
+        .safety-img {
+            max-width: 760px !important;
+            min-height: auto  !important;
+        }
+    }
+
+    .safety-title {
+        text-align: center;
+    }
+
+    .safety-bg {
+        top: -45% !important;
+        left: 0 !important;
+    }
+}
+
+@media (max-width: 856px) {
+    .safety__info {
+        max-width: 500px;
+        grid-template-columns: repeat(1, 1fr) !important;
+        margin: 0 auto;
+
+        &-item {
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
 </style>
