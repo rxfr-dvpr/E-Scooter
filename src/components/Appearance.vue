@@ -145,6 +145,30 @@ export default {
     }
 }
 
+@media (max-width: 1918px) {
+    .appearance-filter {
+        max-width: 100% !important;
+        left: 0% !important;
+    }
+}
+
+@media (max-width: 1190px) {
+    .appearance-filter {
+        top: -15% !important;
+    }
+
+    .appearance-vector {
+        top: 55% !important;
+        left: 0% !important;
+    }
+
+    .cards-img {
+        top: 30% !important;
+        left: -20% !important;
+    }
+}
+
+
 @media (max-width: 992px) {
     .appearance__section {
         .row {
