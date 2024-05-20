@@ -235,6 +235,12 @@ export default {
     }
 }
 
+@media (max-width: 1500px) {
+    .performance-vector {
+        display: none;
+    }
+}
+
 @media (max-width: 992px) {
     .performance__info {
         grid-template-columns: repeat(2, 1fr) !important;
