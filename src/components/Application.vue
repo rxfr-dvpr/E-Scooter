@@ -151,4 +151,33 @@ export default {
     }
 }
 
+@media (max-width: 992px) {
+    .application__descr {
+        max-width: 450px !important;
+    }
+
+    .application-img {
+        max-width: 350px !important;
+    }
+}
+
+@media (max-width: 886px) {
+    .application__section {
+        .row {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 45px;
+        }
+
+        .application__descr {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .application-img {
+        max-width: 300px !important;
+    }
+}
+
 </style>
