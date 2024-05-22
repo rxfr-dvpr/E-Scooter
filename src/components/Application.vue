@@ -77,6 +77,7 @@ export default {
             display: flex;
             flex-direction: column;
             row-gap: 30px;
+            z-index: 7;
 
             &-title {
                 color: var(--main-orange);
@@ -151,6 +152,33 @@ export default {
     }
 }
 
+@media (max-width: 1919px) {
+    .application {
+        &-bg {
+            max-width: 100%;
+            width: 100%;
+            left: 0% !important;
+            bottom: 0% !important;
+        }
+
+        &-img {
+            margin: 0 auto;
+        }
+    }
+
+    .vector-img {
+        max-width: 500px !important;
+        top: -30% !important;
+        right: 0 !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .vector-img {
+        display: none !important;
+    }
+}
+
 @media (max-width: 992px) {
     .application__descr {
         max-width: 450px !important;
@@ -158,6 +186,10 @@ export default {
 
     .application-img {
         max-width: 350px !important;
+    }
+
+    .application-bg-2 {
+        display: none !important;
     }
 }
 
