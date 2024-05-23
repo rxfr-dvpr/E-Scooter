@@ -187,6 +187,15 @@ export default {
     }
 }
 
+@media (max-width: 992px) {
+    .header-img {
+        max-width: 700px !important;
+        right: 0 !important;
+        left: unset !important;
+        bottom: 10% !important;
+    }
+}
+
 @media (max-width: 876px) {
     .header-filter {
         bottom: 70%;
