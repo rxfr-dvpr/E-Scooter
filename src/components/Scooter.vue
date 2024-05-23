@@ -26,8 +26,6 @@
         </div>
 
         <img :src="light ? scooter2Img : scooter1Img" alt="" class="scooter-img">
-
-        <img :src="scooterVector" alt="" class="scooter-vector">
     </div>
   </section>
 </template>
@@ -63,7 +61,6 @@ export default {
             },
             scooter1Img: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Scooter%2Fscooter-img-1.png?alt=media&token=5590b6e7-ea1f-4217-881c-6fe28cbe5c0b',
             scooter2Img: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Scooter%2Fscooter-img-2.png?alt=media&token=139dfc1c-0322-4ba6-87e1-4ba168e0431b',
-            scooterVector: 'https://firebasestorage.googleapis.com/v0/b/mi-scooter-2e744.appspot.com/o/Scooter%2Fscooter-vector.png?alt=media&token=8eea5456-3cea-4b4d-9ea0-eaff212bbcd0'
         }
     }
 }
@@ -215,13 +212,6 @@ export default {
         right: 7%;
         pointer-events: none;
         z-index: 6;
-    }
-
-    .scooter-vector {
-        position: absolute;
-        top: -30%;
-        left: -20%;
-        z-index: -1;
     }
 }
 
