@@ -198,7 +198,13 @@ export default {
 
 @media (max-width: 876px) {
     .header-filter {
-        bottom: 70%;
+        bottom: 80%;
+    }    
+}
+
+@media (max-width: 576px) {
+    .header-filter {
+        bottom: 100%;
     }    
 }
 
