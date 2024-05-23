@@ -170,6 +170,10 @@ export default {
         margin-top: 0;
     }
 
+    .nav-logo {
+        max-width: 45px;
+    }
+
     .nav {
         &.light {
             .nav-wrapper {
