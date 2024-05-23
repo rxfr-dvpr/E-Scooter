@@ -215,6 +215,12 @@ export default {
     }
 }
 
+@media (max-width: 992px) {
+    .scooter-img {
+        display: none !important;
+    }
+}
+
 @media (max-width: 856px) {
 
     .scooter__section {
@@ -240,6 +246,27 @@ export default {
     .info__list {
         max-width: max-content !important;
     }
+}
+
+@media (max-width: 668px) {
+    .scooter__section {
+        .row {
+            flex-direction: column;
+            row-gap: 30px;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .scooter__descr {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .scooter__descr-btn {
+        margin-top: 30px !important;
+    }
+    
 }
 
 </style>
